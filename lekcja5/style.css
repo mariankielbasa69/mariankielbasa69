@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 15%);
+}
+
+.postcard {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65%;
+  background: #fb3f3f;
+background: radial-gradient(circle, rgba(251, 63, 63, 1) 0%, rgba(63, 163, 251, 1) 0%, rgba(133, 146, 181, 1) 18%, rgba(230, 0, 255, 1) 30%, rgba(168, 121, 146, 1) 35%, rgba(63, 118, 251, 1) 38%, rgba(63, 251, 185, 1) 57%, rgba(63, 195, 251, 1) 43%, rgba(243, 98, 15, 1) 45%, rgba(63, 107, 251, 1) 48%, rgba(251, 63, 63, 1) 53%, rgba(134, 96, 161, 1) 66%, rgba(255, 149, 0, 1) 77%, rgba(255, 85, 0, 1) 86%, rgba(255, 0, 251, 1) 97%);
+}
+
+.sun {
+  position: absolute;
+  top: 60px;
+  right: 80px;
+  width: 80px;
+  height: 80px;
+  border-radius: 0px 200px 200px 200px;
+-webkit-border-radius: 0px 200px 200px 200px;
+-moz-border-radius: 0px 200px 200px 200px;
+border: 8px solid #0057ff;
+background-color: #3b15ba;
+box-shadow: -150px -10px 11px 54px rgba(177,58,58,0.72);
+-webkit-box-shadow: -150px -10px 11px 54px rgba(177,58,58,0.72);
+-moz-box-shadow: -150px -10px 11px 54px rgba(177,58,58,0.72);
+  /* TODO: sun color experiment */
+}
+
+.hills {
+  position: absolute;
+  bottom: 30%;
+  left: -10%;
+  width: 120%;
+  height: 45%;
+  background: radial-gradient(
+    eclipse 120% 60% at 50% 100%
+    hsl(120, 50%, 35%),
+    hsl(120,40%,25%)
+  );
+  border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+}
+
+.water {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 32%;
+  background: linear-gradient(
+    to bottom,
+    hsla(210, 70%, 50%, 0.85),
+    hsla(210, 6%, 30%, 1)
+  );
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: Georgia, serif;
+  color: hsl(0,0%,100%);
+  font-size: 2rem;
+  text-shadow: 
+  2px 2px 4px rgba(0,0,0,0.7)
+  0 0 20px hsl(45, 100%, 60%);
+}
